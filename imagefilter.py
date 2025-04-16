@@ -107,6 +107,8 @@ def main():
     chains['export'].set_export_callback('exporter', image_handler)
     chains['export'].execute('{"exporter": {"command": "on"}}')
 
+    iffsdkpy.log(iffsdkpy.log_level.info, Path(__file__).stem, "Press Ctrl-C to terminate the program")
+
     global import_buffer
     global import_metadata
 
